@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import { reduxForm, Field, Form } from 'redux-form';
 
 import FormInput from '../formFields';
+import { FormButton } from '../formFields';
 
 class SignInForm extends Component {
     render() {
-        const { className } = this.props;
+        const { className, handleSubmit } = this.props;
         return (
-            <form className={`${className} sign-in-form`}>
+            <form onSubmit={handleSubmit} className={`${className} sign-in-form`}>
 
                 <Field 
                     className="sign-in-form-email" 
@@ -26,6 +27,15 @@ class SignInForm extends Component {
                     title="Password" 
                     placeholder="Password" 
                     component={FormInput}
+                />
+
+                <Field 
+                    className="sign-in-form-login"
+                    onClick={() => console.log("try to submit")} 
+                    name="login" 
+                    type="submit" 
+                    title="Login" 
+                    component={FormButton}
                 />
 
             </form>
