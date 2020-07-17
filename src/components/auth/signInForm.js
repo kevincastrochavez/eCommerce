@@ -55,7 +55,7 @@ class SignInForm extends Component {
 
                 <Field 
                     className="sign-in-form-login"
-                    onClick={() => console.log("try to submit")} 
+                    onClick={() => history.push('/account')} 
                     name="login" 
                     type="submit" 
                     title="Login" 

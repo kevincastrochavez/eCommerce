@@ -12,21 +12,18 @@ class SignUpForm extends Component {
     render() {
 
         const { className, handleSubmit } = this.props;
-        const links = [
+        const info = [
             {
                 _id: 0,
-                title: 'Not registered? Create account here',
-                onClick: () => history.push('/signup')
+                title: 'At least 6 characters',
             },
             {
                 _id: 1,
-                title: 'Forgot account email?',
-                onClick: () => console.log('forgot email')
+                title: 'At least one number',
             },
             {
                 _id: 2,
-                title: 'Forgot password?',
-                onClick: () => console.log('forgot password')
+                title: 'At least one symbol',
             }
         ]
 
@@ -61,7 +58,7 @@ class SignUpForm extends Component {
                 />
 
                 <Field 
-                    className="sign-up-form-confirm-password" 
+                    className="sign-up-form-confirm" 
                     name="confirm" 
                     type="password" 
                     title="Confirm Password" 
@@ -74,8 +71,17 @@ class SignUpForm extends Component {
                 <div className="sign-up-form-line"></div>
 
                 <Field 
+                    className="sign-up-form-login"
+                    onClick={() => history.push('/account')} 
+                    name="login" 
+                    type="submit" 
+                    title="Create Account" 
+                    component={FormButton}
+                />
+
+                <Field 
                     className="sign-up-form-back"
-                    onClick={() => console.log("try to go back")} 
+                    onClick={() => history.push('/signin')} 
                     name="back" 
                     type="button" 
                     title="Back" 
@@ -83,16 +89,7 @@ class SignUpForm extends Component {
                     component={FormButton}
                 />
 
-                <Field 
-                    className="sign-up-form-login"
-                    onClick={() => console.log("try to submit")} 
-                    name="login" 
-                    type="submit" 
-                    title="Login" 
-                    component={FormButton}
-                />
-
-                <Details className='sign-up-form-details' title='QuickLinks' links={links}/>
+                <Details className='sign-up-form-details' title='Password Requirements' info={info}/>
 
             </form>
         );
