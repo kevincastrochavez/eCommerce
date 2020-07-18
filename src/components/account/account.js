@@ -23,49 +23,48 @@ class Account extends Component {
         ]
 
         const navbarLinks = [
-            {   
+            {
                 _id: 0,
                 title: 'Purchase History',
                 active: true,
                 component: <PurchaseHistory/>
             },
-            {   
+            {
                 _id: 1,
                 title: 'Account Information',
                 active: false,
                 component: <AccountInformation/>
             }
         ]
-        
+
         this.props.setHeaderLinks(headerLinks);
         this.props.setNavbarLinks(navbarLinks);
     }
 
     renderContent() {
         let jsx;
-        if (this.props.navbarLinks) {
-            this.props.navbarLinks.map(link => {
-                if (link.active) {
+        if(this.props.navbarLinks) {
+            this.props.navbarLinks.forEach(link => {
+                if(link.active) {
                     jsx = link.component;
                 }
             })
         }
-
         return jsx;
     }
-    
+
     render() {
         return (
-            <div className="account">
-                {this.renderContent}
+            <div className='account'>
+                { this.renderContent() }
             </div>
-        );
-    };
+        )
+    }
 }
 
 function mapStateToProps(state) {
-    const { headerLinks, navbarLins } = state.headerNavbar;
-    return { headerLinks, navbarLins };
+    const { headerLinks, navbarLinks } = state.headerNavbar;
+    return { headerLinks, navbarLinks }
 }
 
 Account = connect(mapStateToProps, actions)(Account);

@@ -16,7 +16,7 @@ class Details extends Component {
         }
         return children;
     }
-    
+
     render() {
         const { className, title } = this.props;
         return (
