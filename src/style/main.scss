@@ -2,9 +2,12 @@
 @import './headerNavbar.scss';
 @import './auth/signIn.scss';
 @import './auth/signUp.scss';
-@import './page-title.scss';
-@import './form-fields.scss';
+@import './pageTitle.scss';
+@import './formFields.scss';
 @import './details.scss';
+@import './account/purchaseHistory.scss';
+@import './account/accountInformation.scss';
+@import './account/account.scss';
 
 html {
     font-size: 62.5%;
