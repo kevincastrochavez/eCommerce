@@ -1,10 +1,64 @@
 .shop-product {
+    display: grid;
+    grid-template-rows: 1/-1;
+    grid-template-columns: 1/-1;
+
+    .shop-product-front,
+    .shop-product-back {
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+    }
+}
+
+.shop-product {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    .shop-product-front,
+    .shop-product-back {
+        backface-visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .shop-product-back {
+        transform: rotateY(-180deg);
+    }
+    
+    &:hover .shop-product-front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .shop-product-back {
+        transform: rotateY(0deg);
+    }
+}
+
+.shop-product-front {
+    height: 314px;
+    width: 240px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    .shop-product-front-img {
+
+    }
+
+    .shop-product-front-title {
+        color: #333;
+        font-size: 18px;
+        font-family: 'Titillium Web';
+    }
+}
+
+
+.shop-product-back {
     height: 314px;
     width: 240px;
     background-color: white;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
     display: grid;
-    grid-template-rows: 15px [title-s] 30px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px;
+    grid-template-rows: 15px [title-s] 30px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px; 
     grid-template-columns: 15px [s] 1fr [e] 15px;
     justify-items: start;
     grid-row-gap: 7px;
@@ -13,7 +67,7 @@
         grid-column: s/e;
     }
 
-    .shop-product-title {
+    .shop-product-back-title {
         color: #00CB79;
         font-family: 'Encode Sans Condensed';
         font-size: 16px;
@@ -21,21 +75,21 @@
         grid-row: title-s/title-e;
     }
 
-    .shop-product-description {
+    .shop-product-back-description {
         font-size: 13px;
         color: #333;
         grid-row: description-s/description-e;
     }
 
-    .shop-product-price {
+    .shop-product-back-price {
         grid-row: price-s/price-e;
     }
 
-    .shop-product-quantity {
+    .shop-product-back-quantity {
         grid-row: footer-s/footer-e;
     }
 
-    .shop-product-add-to-cart {
+    .shop-product-back-add-to-cart {
         justify-self: end;
         height: 40px;
         width: 97px;
