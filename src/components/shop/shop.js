@@ -8,6 +8,14 @@ import ShopCart from './shopCart';
 
 class Shop extends Component {
 
+    constructor() {
+        super();
+
+        this.state = {
+            showCart: true
+        }
+    }
+
     componentDidMount() {
         const headerLinks = [
             {
@@ -36,7 +44,9 @@ class Shop extends Component {
 
         return (
             <div className='shop'>
+
                 <ShopSearchBar onSubmit={this.onSubmit} className="shop_search-bar" />
+
                 <div className='shop-products'>
                     {
                         this.props.filteredProducts.map(product => {
@@ -46,9 +56,11 @@ class Shop extends Component {
                         })
                     }
                 </div>
-                {/* {
+
+                {
                     this.state.showCart ? <ShopCart className="shop__cart"/> : ''
-                } */}
+                }
+
             </div>
         )
     }
