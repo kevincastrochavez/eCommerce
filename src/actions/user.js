@@ -1,12 +1,43 @@
 import {
     SET_USER_PURCHASES,
-    SET_PURCHASE_DETAIL
+    SET_PURCHASE_DETAIL,
+    SET_CART_PRODUCTS
 } from './types';
 
 export function setPurchaseDetail(_id) {
     return ({
         type: SET_PURCHASE_DETAIL,
         payload: _id
+    })
+}
+
+export function fetchCartProducts() {
+    return ({
+        type: SET_CART_PRODUCTS,
+        payload: [
+            {
+                _id: 0,
+                product: {
+                    _id: 0,
+                    title: 'JavaScript in the Browser',
+                    description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
+                    price: 1.99,
+                    belongsTo: [0, 1]
+                },
+                quantity: 2
+            },
+            {
+                _id: 1,
+                product: {
+                    _id: 1,
+                    title: 'Database',
+                    description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
+                    price: 1.99,
+                    belongsTo: [0, 3]
+                }, 
+                quantity: 1
+            }
+        ]
     })
 }
 
