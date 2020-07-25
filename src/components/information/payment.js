@@ -19,9 +19,9 @@ class Payment extends Component {
 
     render() {
         return (
-            <div className='sign-in'>
-                <PageTitle className='sign-in-page-title' title='Payment Information' />
-                <PaymentForm onSubmit={onSubmit} className="" />
+            <div className='payment'>
+                <PageTitle className='payment-page-title' title='Payment Information' />
+                <PaymentForm onSubmit={onSubmit} className="payment__form" />
             </div>
         )
     }
