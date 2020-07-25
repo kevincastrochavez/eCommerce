@@ -30,7 +30,8 @@ export function fetchCartProducts() {
                     title: 'JavaScript in the Browser',
                     description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                     price: 1.99,
-                    belongsTo: [0, 1]
+                    belongsTo: [0, 1],
+                    imageUrl: 'http://via.placeholder.com/80x80'
                 },
                 quantity: 2
             },
@@ -41,7 +42,8 @@ export function fetchCartProducts() {
                     title: 'Database',
                     description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                     price: 1.99,
-                    belongsTo: [0, 3]
+                    belongsTo: [0, 3],
+                    imageUrl: 'http://via.placeholder.com/80x80'
                 }, 
                 quantity: 1
             }

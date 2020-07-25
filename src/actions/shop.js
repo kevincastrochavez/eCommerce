@@ -65,49 +65,56 @@ export function fetchShopProducts() {
                 title: 'JavaScript in the Browser',
                 description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                 price: 1.99,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 1,
                 title: 'Database',
                 description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                 price: 1.99,
-                belongsTo: [0, 3]
+                belongsTo: [0, 3],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 2,
                 title: 'Full Stack Development',
                 description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                 price: 1.99,
-                belongsTo: [0, 1, 4]
+                belongsTo: [0, 1, 4],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 3,
                 title: 'UI Design',
                 description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                 price: 1.99,
-                belongsTo: [0, 2]
+                belongsTo: [0, 2],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 4,
                 title: 'JavaScript',
                 description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                 price: 1.99,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 5,
                 title: 'Advanced programming',
                 description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                 price: 1.99,
-                belongsTo: [0, 5]
+                belongsTo: [0, 5],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 6,
                 title: 'JavaScript Development',
                 description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
                 price: 1.99,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             }
         ]
     })
