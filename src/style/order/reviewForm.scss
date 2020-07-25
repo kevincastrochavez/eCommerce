@@ -2,6 +2,7 @@
 
     .review-form__products {
         grid-column: 1/-1;
+        grid-row: products-s/products-e;
     }
 
     .review-form__line {
