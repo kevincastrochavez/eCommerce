@@ -6,7 +6,6 @@ import FormInput from '../formFields';
 import { FormButton } from '../formFields';
 import Details from '../details';
 
-import history from '../../history';
 
 class SignInForm extends Component {
     render() {
@@ -55,7 +54,6 @@ class SignInForm extends Component {
 
                 <Field 
                     className="sign-in-form-login"
-                    onClick={() => history.push('/account')} 
                     name="login" 
                     type="submit" 
                     title="Login" 
