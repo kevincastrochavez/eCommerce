@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 import PageTitle from '../pageTitle';
+
+// REDUX 
+
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+
 import PaymentForm from './paymentForm';
 
 class Payment extends Component {
@@ -13,15 +17,14 @@ class Payment extends Component {
     }
 
     onSubmit = (fields) => {
-        this.props.Payment(fields);
-        this.props.history.push('/account');
+        console.log(fields);
     }
 
     render() {
         return (
             <div className='payment'>
-                <PageTitle className='payment-page-title' title='Payment Information' />
-                <PaymentForm onSubmit={onSubmit} className="payment__form" />
+                <PageTitle className='payment__page-title' title='Payment Information' />
+                <PaymentForm onSubmit={this.onSubmit} className='payment__form' />
             </div>
         )
     }

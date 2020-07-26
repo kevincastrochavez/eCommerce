@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import * as actions from '../../actions';
 import { connect } from 'react-redux';
+import * as actions from '../../actions';
+
 import AccountInformation from './accountInformation';
 import PurchaseHistory from './purchaseHistory';
 

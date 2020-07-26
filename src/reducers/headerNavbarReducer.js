@@ -14,13 +14,13 @@ export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_HEADER_LINKS:
             return {
-                ...state, 
+                ...state,
                 headerLinks: action.payload
             }
-        case SET_NAVBAR_LINKS: 
-            const { links, onClick } = action.payload;
+        case SET_NAVBAR_LINKS:
+        const { links, onClick } = action.payload; 
             return {
-                ...state, 
+                ...state,
                 navbarLinks: links,
                 onClick: onClick
             }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export function UnderlinedTitle({ className, title }) {
     return (
@@ -11,15 +11,12 @@ export function UnderlinedTitle({ className, title }) {
 export function InfoTitle({ className, title, value }) {
     return (
         <div className={`${className} info-title`}>
-            
-            <div className="info-title__title">
+            <div className='info-title__title'>
                 {title}
             </div>
-
-            <div className="info-title__value">
+            <div className='info-title__value'>
                 {value}
             </div>
-            
         </div>
     )
 }

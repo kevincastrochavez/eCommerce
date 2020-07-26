@@ -1,25 +1,23 @@
 .details {
     display: grid;
     grid-row-gap: 13px;
-    
-    .detailes-title {
+
+    &__title {
         padding-bottom: 7px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #CCC;
         font-size: 14px;
         font-weight: 600;
     }
 
-    .details-links {
+    &__links {
+        font-size: 14px;
         display: grid;
         grid-row-gap: 10px;
-        font-size: 14px;
-
         & > * {
             text-decoration-line: underline;
         }
-    }
-
-    .details-item {
-        text-decoration-line: none;;
+        .details__item {
+            text-decoration-line: none;
+        }
     }
 }

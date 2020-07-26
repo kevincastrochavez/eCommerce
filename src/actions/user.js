@@ -1,4 +1,4 @@
-import {
+import { 
     SET_USER_PURCHASES,
     SET_PURCHASE_DETAIL,
     SET_CART_PRODUCTS,
@@ -12,9 +12,9 @@ export function signIn({email, password}) {
         payload: {
             user: {
                 _id: 0,
-                name: 'Kevin Castro',
-                address: '123 I live here',
-                addCartProducts: []
+                name: 'Max Nelson',
+                address: '1234 I live here',
+                cartProducts: []
             }
         }
     })
@@ -43,7 +43,7 @@ export function fetchCartProducts() {
                 product: {
                     _id: 0,
                     title: 'JavaScript in the Browser',
-                    description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
+                    description: 'The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. ... The running speed starts slowly, but gets faster each minute after you hear this signal.',
                     price: 1.99,
                     belongsTo: [0, 1],
                     imageUrl: 'http://via.placeholder.com/80x80'
@@ -54,14 +54,14 @@ export function fetchCartProducts() {
                 _id: 1,
                 product: {
                     _id: 1,
-                    title: 'Database',
-                    description: 'kasmkdaksmdion askndkanoksnf asndkasmkldn askndkans',
+                    title: 'Graph Database',
+                    description: 'The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. ... The running speed starts slowly, but gets faster each minute after you hear this signal.',
                     price: 1.99,
-                    belongsTo: [0, 3],
+                    belongsTo: [0, 6],
                     imageUrl: 'http://via.placeholder.com/80x80'
-                }, 
+                },
                 quantity: 1
-            }
+            },
         ]
     })
 }

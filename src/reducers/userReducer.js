@@ -25,32 +25,30 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case AUTHENTICATE_USER:
+        case AUTHENTICATE_USER: 
             const { user } = action.payload;
             return {
                 ...state,
                 user
             }
         case ADD_CART_PRODUCT:
-            var exists = false;
-            const newCartProduct = action.payload;
-            var cartProducts = [];
+            var exists = false
+            const newCP = action.payload;
+            var cartProducts = []
             state.cartProducts.map(cartProduct => {
-                if (cartProduct.product._id == newCartProduct._id) {
+                if(cartProduct.product._id == newCP._id) {
                     exists = true
                     cartProduct.quantity += 1;
                 }
                 cartProducts.push(cartProduct);
             })
-
-            if (exists == false) {
+            if(exists == false)  {
                 cartProducts.push({
                     _id: state.cartProducts.length + 1,
-                    product: newCartProduct,
+                    product: newCP,
                     quantity: 1
                 })
             }
-
             return {
                 ...state,
                 cartProducts: cartProducts
@@ -68,7 +66,7 @@ export default function(state = INITIAL_STATE, action) {
         case SET_PURCHASE_DETAIL:
             let purchaseDetail;
             state.purchases.map(purchase => {
-                if (purchase._id == action.payload) {
+                if(purchase._id == action.payload) {
                     purchaseDetail = purchase;
                 }
             })

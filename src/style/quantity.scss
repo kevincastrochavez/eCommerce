@@ -3,9 +3,9 @@
     grid-template-rows: [s] 21px [m] 21px [e];
     grid-template-columns: [s] 65px [m] 29px [e];
 
-    .quantity-count,
-    .quantity-plus,
-    .quantity-minus {
+    &__count,
+    &__plus,
+    &__minus {
         border: 1px solid #E6E6E6;
         display: grid;
         justify-items: center;
@@ -15,7 +15,7 @@
         grid-column: m/e;
     }
 
-    .quantity-count {
+    &__count {
         grid-row: s/e;
         grid-column: s/m;
         height: 42px;
@@ -24,13 +24,11 @@
         font-size: 23px;
         color: #333;
     }
-
-    .quantity-plus {
+    &__plus {
         grid-row: s/m;
         border-radius: 0 3px 0 0;
-    }   
-
-    .quantity-minus {
+    }
+    &__minus {
         grid-row: m/e;
         border-radius: 0 0 3px 0;
     }
